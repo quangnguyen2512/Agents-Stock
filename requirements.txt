@@ -1,0 +1,52 @@
+# requirements.txt cho dự án AI Trading Analysis
+# Core data processing
+pandas
+numpy
+
+# Streamlit dashboard
+streamlit
+
+# Stock data API
+vnstock
+
+# Google AI
+google-generativeai
+
+# Async support
+asyncio-throttle
+aiohttp
+
+# Data visualization
+plotly
+matplotlib
+seaborn
+
+# Excel export
+openpyxl
+xlsxwriter
+
+# Configuration and logging
+pydantic
+python-dotenv
+
+# Utilities
+requests
+beautifulsoup4
+python-dateutil
+
+# Optional: Technical indicators
+ta
+talib-binary
+
+# Optional: Machine learning
+scikit-learn
+
+# Development and testing
+pytest>=7.0.0
+black>=22.0.0
+flake8>=5.0.0
+
+scipy
+echarts
+ta-lib
+st-gsheets-connection
