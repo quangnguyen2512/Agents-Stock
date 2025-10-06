@@ -112,7 +112,7 @@ class PEValuationAnalyst:
 
             **Yêu cầu phân tích:**
             Thực hiện phân tích định giá chuyên sâu dựa trên dữ liệu, đúng cấu trúc JSON chuẩn sau (KHÔNG ĐƯỢC THÊM/BỚT bất kỳ trường nào!).
-            Các kịch bản "bull", "neutral", "bear" sẽ là các giá trị gần nhất trong {dist_stats} không cố định 25,50,75
+            Các kịch bản "bull", "neutral", "bear" sẽ là các giá trị gần nhất trong {dist_stats}
 
             **Cấu trúc JSON cần trả về:**
             {{
@@ -125,9 +125,9 @@ class PEValuationAnalyst:
                 "current_vs_fair": "<±X%>",
                 "z_score": ,
                 "scenarios": {{
-                "bull": {{"pe": <giá trị trên 2 bậc>, "target_price": , "probability": "<%>", "rationale": "Lý do kịch bản tích cực"}},
-                "neutral": {{"pe" <giá trị trên>: , "target_price": , "probability": "<%>", "rationale": "Lý do kịch bản trung tính"}},
-                "bear": {{"pe": , "<giá trị dưới>": , "probability": "<%>", "rationale": "Lý do kịch bản tiêu cực"}}
+                "bull": {{"pe": <giá trị trên cách 1 bậc trong {dist_stats}>, "target_price": , "probability": "<%>", "rationale": "Lý do kịch bản tích cực"}},
+                "neutral": {{"pe" <giá trị trên gần nhất trong {dist_stats}>: , "target_price": , "probability": "<%>", "rationale": "Lý do kịch bản trung tính"}},
+                "bear": {{"pe": , "<giá trị pe liền dưới trong {dist_stats}>": , "probability": "<%>", "rationale": "Lý do kịch bản tiêu cực"}}
                 }}
             }},
             "growth_analysis": {{

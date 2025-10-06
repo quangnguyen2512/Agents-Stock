@@ -1,10 +1,9 @@
 import streamlit as st
 from src.data.price_api import PriceAPI
 from src.data.pe_api import PEAPI
-from src.data.fundamental_api import Fundamental
+from src.data.fundamental_api import FundamentalAPI
 
 import streamlit as st
-from streamlit_gsheets import GSheetsConnection
 
 
 st.title("Test VNStockAPI")
@@ -12,7 +11,7 @@ st.title("Test VNStockAPI")
 symbol = st.text_input("Symbol", value="SSI")
 
 price = PriceAPI(symbol)
-fundamental = Fundamental(symbol)
+fundamental = FundamentalAPI(symbol)
 pe = PEAPI(symbol)
 
 

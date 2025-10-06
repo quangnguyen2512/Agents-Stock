@@ -50,8 +50,7 @@ NHOM1 = IndustryConfig(
     cashflow_fields=[
             "CP","Năm","Kỳ","Khấu hao TSCĐ",
             "Lưu chuyển tiền tệ ròng từ các hoạt động SXKD",
-            "Mua sắm TSCĐ","Tiền trả các khoản đi vay","Cổ tức đã trả",
-            "Lưu chuyển tiền thuần trong kỳ"
+            "Mua sắm TSCĐ","Lưu chuyển tiền thuần trong kỳ"
         ],
         income_fields=[
             "CP","Năm","Kỳ","Tăng trưởng doanh thu (%)","Doanh thu thuần",
@@ -59,10 +58,10 @@ NHOM1 = IndustryConfig(
             "Lợi nhuận sau thuế của Cổ đông công ty mẹ (đồng)"
         ],
         ratio_fields=[
-            "CP","Năm","Kỳ","Nợ/VCSH","Số ngày thu tiền bình quân",
-            "Vòng quay hàng tồn kho","Biên lợi nhuận gộp (%)",
-            "Biên lợi nhuận ròng (%)","ROE (%)","Chỉ số thanh toán hiện thời",
-            "Khả năng chi trả lãi vay","P/E","P/B","EPS (VND)","EV/EBITDA"
+            "CP","Năm","Kỳ","Nợ/VCSH"
+            ,"Biên lợi nhuận gộp (%)",
+            "Biên lợi nhuận ròng (%)","ROE (%)","EBITDA (Tỷ đồng)",
+            "EV/EBITDA","EBIT (Tỷ đồng)","Vòng quay tài sản","Đòn bẩy tài chính","Số CP lưu hành (Triệu CP)"
         ],
         balance_fields=[
             "CP","Năm","Kỳ","Tiền và tương đương tiền (đồng)",
@@ -79,9 +78,9 @@ NHOM2 = IndustryConfig(
     name="Nhóm2",
     codes="ACB,STB,BID,SSB,HDB,MBB,BVB,ABB,PNB,VCB,BAB,PGB,TPB,VRB,OCB,DAB,TB,NAB,MSB,EIB,VAB,TCB,SGB,AGRB,KLB,MXBANK,VNDB,LPB,VIB,EAB,CTG,DCB,NVB,PACB,VBB,VPBF,GB,SCB,WEB,FCB,MHBB,SHB,MDB,VPB".split(","),
     cashflow_fields=[
-        "CP","Năm","Kỳ","Lưu chuyển tiền tệ ròng từ các hoạt động SXKD",
-        "Mua sắm TSCĐ","Tăng vốn cổ phần từ góp vốn và/hoặc phát hành cổ phiếu",
-        "Cổ tức đã trả","Lưu chuyển tiền thuần trong kỳ","Tiền và tương đương tiền cuối kỳ"
+         "CP","Năm","Kỳ","Khấu hao TSCĐ",
+            "Lưu chuyển tiền tệ ròng từ các hoạt động SXKD",
+            "Mua sắm TSCĐ","Lưu chuyển tiền thuần trong kỳ"
     ],
     income_fields=[
         "CP","Năm","Kỳ","Thu nhập lãi thuần","Lãi thuần từ hoạt động dịch vụ",
@@ -89,8 +88,10 @@ NHOM2 = IndustryConfig(
         "LN trước thuế","Lợi nhuận sau thuế của Cổ đông công ty mẹ (đồng)"
     ],
     ratio_fields=[
-        "CP","Năm","Kỳ","ROE (%)","ROA (%)","Vốn hóa (Tỷ đồng)",
-        "P/E","P/B","EPS (VND)","BVPS (VND)"
+        "CP","Năm","Kỳ","Nợ/VCSH"
+            ,"Biên lợi nhuận gộp (%)",
+            "Biên lợi nhuận ròng (%)","ROE (%)","EBITDA (Tỷ đồng)",
+            "EV/EBITDA","EBIT (Tỷ đồng)","Số CP lưu hành (Triệu CP)"
     ],
     balance_fields=[
         "CP","Năm","Kỳ","Cho vay khách hàng","Dự phòng rủi ro cho vay khách hàng",
@@ -102,13 +103,11 @@ NHOM2 = IndustryConfig(
 # Nhóm3: fallback mặc định nếu không thuộc Nhóm1 hoặc Nhóm2
 NHOM3 = IndustryConfig(
     name="Nhóm3",
-    codes=[],  # không cần liệt kê
-    
-    cashflow_fields=[
+        codes=[],  # không cần liệt kê
+        cashflow_fields=[
             "CP","Năm","Kỳ","Khấu hao TSCĐ",
             "Lưu chuyển tiền tệ ròng từ các hoạt động SXKD",
-            "Mua sắm TSCĐ","Tiền trả các khoản đi vay","Cổ tức đã trả",
-            "Lưu chuyển tiền thuần trong kỳ"
+            "Mua sắm TSCĐ","Lưu chuyển tiền thuần trong kỳ"
         ],
         income_fields=[
             "CP","Năm","Kỳ","Tăng trưởng doanh thu (%)","Doanh thu thuần",
@@ -118,12 +117,12 @@ NHOM3 = IndustryConfig(
         ratio_fields=[
             "CP","Năm","Kỳ","Nợ/VCSH"
             ,"Biên lợi nhuận gộp (%)",
-            "Biên lợi nhuận ròng (%)","ROE (%)","Chỉ số thanh toán hiện thời",
-            "Khả năng chi trả lãi vay","P/E","P/B","EPS (VND)","EV/EBITDA"
+            "Biên lợi nhuận ròng (%)","ROE (%)","EBITDA (Tỷ đồng)",
+            "EV/EBITDA","EBIT (Tỷ đồng)","Vòng quay tài sản","Đòn bẩy tài chính","Số CP lưu hành (Triệu CP)"
         ],
         balance_fields=[
             "CP","Năm","Kỳ","Tiền và tương đương tiền (đồng)",
-            "Các khoản phải thu ngắn hạn (đồng)",
+            "Các khoản phải thu ngắn hạn (đồng)","Hàng tồn kho, ròng (đồng)",
             "Tài sản cố định (đồng)","TỔNG CỘNG TÀI SẢN (đồng)",
             "Vay và nợ thuê tài chính ngắn hạn (đồng)",
             "Vay và nợ thuê tài chính dài hạn (đồng)",
@@ -149,7 +148,7 @@ def find_industry_config(symbol: str) -> IndustryConfig:
   
 
 
-class Fundamental:
+class FundamentalAPI:
     """
     API chính:
       
@@ -175,17 +174,22 @@ class Fundamental:
 
     def get_income_statement(self)->pd.DataFrame:
         df=self._finance.income_statement(period="quarter",lang="vi")
-        cols_to_divide = [col for col in df.columns if col not in ['CP','Năm', 'Kỳ']]
+        cols_to_divide = [col for col in df.columns if col not in ['CP','Năm', 'Kỳ','Tăng trưởng doanh thu (%)']]
         df[cols_to_divide] = df[cols_to_divide].div(1000000000).round(1)
         return df[self.industry.income_fields].sort_values(["Năm","Kỳ"], ascending=[False, False])
 
     def get_ratio(self)->pd.DataFrame:
         raw=self._finance.ratio(period="quarter",lang="vi",dropna=True)
         df=raw.droplevel(0,axis=1)
-        cols_to_divide = [col for col in df.columns if col in ["Biên lợi nhuận gộp (%)","ROE (%)", "ROA (%)","Biên lợi nhuận ròng (%)"]]
+        cols_to_divide = [col for col in df.columns if col in ['Biên lợi nhuận gộp (%)', 'Biên lợi nhuận ròng (%)', 'ROE (%)']]
         df[cols_to_divide] = (df[cols_to_divide]*100).round(2)
+        df['EBITDA (Tỷ đồng)'] = (df['EBITDA (Tỷ đồng)']/1000000000).round(1)
+        df['EBIT (Tỷ đồng)'] = (df['EBIT (Tỷ đồng)']/1000000000).round(1)
         return df[self.industry.ratio_fields].sort_values(["Năm","Kỳ"], ascending=[False, False])
 
     def get_balance_sheet(self)->pd.DataFrame:
         df=self._finance.balance_sheet(period="quarter",lang="vi")
+        cols_to_divide = [col for col in df.columns if col not in ['CP','Năm', 'Kỳ']]
+        df[cols_to_divide] = df[cols_to_divide].div(1000000000).round(1)
+        
         return df[self.industry.balance_fields].sort_values(["Năm","Kỳ"], ascending=[False, False])

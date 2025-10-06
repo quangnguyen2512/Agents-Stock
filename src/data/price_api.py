@@ -26,7 +26,7 @@ class PriceAPI:
     # ================= Price & Index =================
     def get_price_history(
         self,
-        start: str = "2018-01-01",
+        start: str = "2022-01-01",
         end: Optional[str] = None,
         interval: str = "1D",
         add_tech: bool = False,
@@ -76,7 +76,7 @@ class PriceAPI:
 
     def get_enhanced_price_history(
         self,
-        start: str = "2020-06-01",
+        start: str = "2021-01-01",
         end: Optional[str] = None,
         interval: str = "1D",
     ) -> pd.DataFrame:
@@ -100,7 +100,7 @@ class PriceAPI:
         return df.sort_values("time", ascending=False)
     def get_comprehensive_analysis(
         self,
-        start: str = "2024-06-01",
+        start: str = "2022-06-01",
         end: Optional[str] = None,
         interval: str = "1D",
     ) -> Dict[str, Any]:

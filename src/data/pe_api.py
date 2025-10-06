@@ -80,7 +80,7 @@ class DataProcessor:
         }
 
         # Giá trị PEtrailing hiện tại (cuối cùng theo time)
-        percentiles = [25,30, 40, 50, 60,70,75, 80, 90, 95, 99]
+        percentiles = [25,30,35, 40,45, 50, 60,65,70,75, 80,85, 90, 95, 99]
         for p in percentiles:
             stats_dict[f"percentile_{p}"] = np.percentile(pe_values, p).round(1)
 
